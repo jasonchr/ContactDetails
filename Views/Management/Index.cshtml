@@ -1,0 +1,74 @@
+﻿@model MvcApplication1.Areas.ContactDetails.Models.ContactDetails
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+@{Html.BeginForm("Index", "Management", FormMethod.Post); }
+<h4>
+    First Name
+    <br/>
+    @Html.TextBoxFor(m => m.FirstName)
+</h4>
+<h4>
+    Last Name
+    <br/>
+    @Html.TextBoxFor(m => m.LastName)
+</h4>
+<h4>
+    Email
+    <br/>
+    @Html.TextBoxFor(m => m.Email)
+</h4>
+<h4>
+    Home Phone
+    <br/>
+    @Html.TextBoxFor(m => m.HomePhone.CountryCode)
+    @Html.TextBoxFor(m => m.HomePhone.AreaCode)
+    @Html.TextBoxFor(m => m.HomePhone.PhoneNumber)
+</h4>
+<h4>
+    Cell Phone
+    <br/>
+    @Html.TextBoxFor(m => m.CellPhone.CountryCode)
+    @Html.TextBoxFor(m => m.CellPhone.AreaCode)
+    @Html.TextBoxFor(m => m.CellPhone.PhoneNumber)
+</h4>
+<h4>
+    Line 1
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.Line1)
+</h4>
+<h4>Line 2
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.Line2)
+</h4>
+<h4>Line 3
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.Line3)
+</h4>
+<h4>
+    City
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.City)
+</h4>
+<h4>
+    Province
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.Province)
+</h4>
+<h4>
+    Country
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.Country)
+</h4>
+<h4>
+    Postal Code
+    <br/>
+    @Html.TextBoxFor(m => m.HomeAddress.PostalCode)
+</h4>
+<input type="submit" value="Create"/>
+
+@{Html.EndForm(); }
+
